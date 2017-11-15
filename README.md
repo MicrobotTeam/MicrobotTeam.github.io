@@ -15,3 +15,6 @@ MicrobotTeam是一支努力成长的前端技术团队，同时也将不断向�
 - [浅谈Web Worker(MT-heyrumour)](https://heyrumour.github.io/2017/11/05/%E6%B5%85%E8%B0%88Web%20Worker/)
 - [javascript之this篇(MT-uniquestar88)](https://uniquestar88.github.io/2017/11/12/201711/javascript%E4%B9%8Bthis%E7%AF%87/)
 - [node前后端分离(MT-uking2016)](https://uking2016.github.io/2017/11/14/node/)
+- [Canvas入门(MT-coalya)](https://coalya.github.io/2017/11/05/Canvas%E5%85%A5%E9%97%A8/)
+- [精通JavaScript正则之正则基础(MT-keminu)](http://keminu.com/2017/11/05/%E7%B2%BE%E9%80%9AJavaScript%E6%AD%A3%E5%88%99%E4%B9%8B%E6%AD%A3%E5%88%99%E5%9F%BA%E7%A1%80/)
+- [数据双向绑定(MT-keminu)](http://keminu.com/2017/11/05/%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/ )
