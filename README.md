@@ -1,7 +1,9 @@
 MicrobotTeam是一支努力成长的前端技术团队，同时也将不断向业界输出技术资讯、干货等，期待能和整个前端圈子一起，不断进步，快速发展。
 
 ### 友链
-[Android](https://androidblog.linghit.com/)
+|
+[Android](https://androidblog.linghit.com/) |
+[mt.record](https://microbotteam.github.io/mt.record/) |
 
 ### 2017年11月前文章
 
