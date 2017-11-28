@@ -17,6 +17,9 @@ MicrobotTeam是一支努力成长的前端技术团队，同时也将不断向�
 - [数组的操作-迭代方法(MT-hupeip)](https://hupeip.github.io/2017/11/19/%E6%95%B0%E7%BB%84%E7%9A%84%E6%93%8D%E4%BD%9C-%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95/)
 - [React's JSX(MT-4096void)](https://4096void.github.io/myland/React's%20JSX)
 - [深入理解javascript事件(MT-ryansuen)](https://ryansuen.github.io/2017/11/20/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3javascript%E4%BA%8B%E4%BB%B6/)
+- [【译】修改官方Chrome RPM以适配CentOS 6(MT-yzr006)](https://github.com/yzr006/MyMD/blob/master/%E3%80%90%E8%AF%91%E3%80%91%E4%BF%AE%E6%94%B9%E5%AE%98%E6%96%B9Chrome%20RPM%E4%BB%A5%E9%80%82%E9%85%8DCentOS%206.md)
+- [NPM — JavaScript 的包管理器(MT-shuangmuyingzi)](https://shuangmuyingzi.github.io/2017/11/23/npm/)
+- [Promise从入门到入门(MT-mabiao8023)](https://mabiao8023.github.io/2017/11/28/promise%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E9%97%A8/)
 
 ### 2017年11月前文章
 - [前端也来玩爬虫(MT-terry)](https://github.com/yzr006/MyMD/blob/master/%E5%89%8D%E7%AB%AF%E4%B9%9F%E6%9D%A5%E7%8E%A9%E7%88%AC%E8%99%AB.md)
