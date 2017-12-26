@@ -92,10 +92,8 @@ new Vue({
           if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
             let resBody = {};
             try {
-              resBody = JSON.parse(xhr.responseText);
-              if (resBody.code === 0 && resBody.data) {
-                callback(resBody.data);
-              }
+              resBody = typeof xhr.responseText === 'string' ? JSON.parse(xhr.responseText) : xhr.responseText;
+              callback(resBody);
             } catch(e) {
               console.log(e);
             }
