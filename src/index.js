@@ -105,7 +105,7 @@ new Vue({
     getArticleData() {
       this.loading = true;
       this.ajax(`${this.apiPath.HOST}${this.apiPath.GET_ARTICLES}`, (data) => {
-        let tmpArr = data.list;
+        let tmpArr = data;
         tmpArr.sort((a, b) => {
           let aTime = typeof a.time === 'number' ? a.time * 1000 : new Date(a.time.replace('-', '/')).getTime();
           let bTime = typeof b.time === 'number' ? b.time * 1000 : new Date(b.time.replace('-', '/')).getTime();
@@ -127,7 +127,7 @@ new Vue({
     },
     getUsersData() {
       this.ajax(`${this.apiPath.HOST}${this.apiPath.GET_USERS}`, (data) => {
-        this.userList = data.list;
+        this.userList = data;
       });
     }
   },
