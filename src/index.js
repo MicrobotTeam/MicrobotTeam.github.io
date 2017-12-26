@@ -109,10 +109,12 @@ new Vue({
       this.ajax(`${this.apiPath.HOST}${this.apiPath.GET_ARTICLES}`, (data) => {
         let tmpArr = data.list;
         tmpArr.sort((a, b) => {
-          return -(a.time - b.time);
+          let aTime = typeof a.time === 'number' ? a.time * 1000 : new Date(a.time.replace('-', '/')).getTime();
+          let bTime = typeof b.time === 'number' ? b.time * 1000 : new Date(b.time.replace('-', '/')).getTime();
+          return -(aTime - bTime);
         });
         let tmpGroup = this.groupBy(tmpArr, (item) => {
-          let tmpDate = new Date(item.time * 1000);
+          let tmpDate = typeof item.time === 'number' ? new Date(item.time * 1000) : new Date(item.time.replace('-', '/'));
           let formatDate = `${tmpDate.getFullYear()}-${tmpDate.getMonth() + 1}`;
           return formatDate;
         });

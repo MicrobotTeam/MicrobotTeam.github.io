@@ -76,7 +76,8 @@ body {
 	margin-bottom: 20px;
 }
 .banner-wrap .logo {
-	width: 100px;
+	display: inline-block;
+	padding: 0 10px;
 	height: 50px;
 	background-color: #ddd;
 	color: #333;
@@ -86,11 +87,13 @@ body {
 .banner-wrap .intro {
 	color: #ddd;
 	padding: 10px 0 20px;
+	text-align: center;
+	font-size: 12px;
 }
 
 .chat-block {
 	border: solid 3px #ddd;
-	border-radius: 10px 10px 0 0;
+	border-radius: 10px;
 	margin-bottom: 20px;
 }
 .chat-block .header {
@@ -100,8 +103,8 @@ body {
 	padding-left: 10px;
 	font-size: 16px;
 	position: relative;
-	text-align: right;
-	padding-right: 30px;
+	text-align: left;
+	padding-left: 10px;
 	font-weight: 700;
 }
 .chat-block .header .dot {
