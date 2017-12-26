@@ -12,6 +12,7 @@
     <script type="text/javascript" src="./src/vue.min.js"></script>
   </head>
   <body>
+    <div id="particles-js"></div>
     <div id="app" class="page-content">
       <!-- banner -->
       <div class="banner-wrap">
@@ -64,7 +65,7 @@
     </script>
     <script type="text/x-template" id="article-block-template">
       <!-- 单条记录 -->
-      <div :class="'item-wrap clear color-' + (itemIndex % 4 + 1)">
+      <div :class="'item-wrap clear color-' + (itemIndex % 3 + 2)">
         <!-- 头像 -->
         <div class="user-info" @mouseenter="hoverUserInfoHandler(true)" @mouseleave="hoverUserInfoHandler(false)">
           <span class="avata">{{ authorRef.nickname.slice(0,1) }}</span>
@@ -94,6 +95,7 @@
       </div>
     </script>
     
+    <script type="text/javascript" src="./src/particles.min.js"></script>
     <script type="text/javascript" src="./src/index.js"></script>
   </body>
 </html>
