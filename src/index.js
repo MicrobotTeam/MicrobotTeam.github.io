@@ -61,9 +61,9 @@ new Vue({
   data: {
     loading: false,
     apiPath: {
-      HOST: 'http://103.219.193.220:7300/mock/5a421748c1dee372e8e026f5/microbotTeam',
-      GET_ARTICLES: '/article',
-      GET_USERS: '/users'
+      HOST: '/data',
+      GET_ARTICLES: '/article.json',
+      GET_USERS: '/users.json'
     },
     userList: [],
     chatList: []
