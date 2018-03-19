@@ -340,5 +340,23 @@
         "title": "理解JavaScript之数组扁平化",
         "link": "http://keminu.com/2018/03/06/%E7%90%86%E8%A7%A3JavaScript%E4%B9%8B%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96/",
         "time": "2018/03/07"
+    },
+    {
+        "author": "heyrumour",
+        "title": "移动端适配",
+        "link": "https://heyrumour.github.io/2018/03/04/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/#more",
+        "time": "2018/03/14"
+    },
+    {
+        "author": "uniquestar88",
+        "title": "原生App与javascript交互",
+        "link": "https://uniquestar88.github.io/2018/03/14/%E5%8E%9F%E7%94%9FApp%E4%B8%8Ejavascript%E4%BA%A4%E4%BA%92/",
+        "time": "2018/03/14"
+    },
+    {
+        "author": "xfh0192",
+        "title": "关于闭包",
+        "link": "https://xfh0192.github.io/2018/03/15/%E5%85%B3%E4%BA%8E%E9%97%AD%E5%8C%85/",
+        "time": "2018/03/14"
     }
 ]
