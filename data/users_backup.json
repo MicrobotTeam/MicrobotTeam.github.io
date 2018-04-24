@@ -1,77 +1,82 @@
 [
     {
         "username": "maizsss",
-        "nickname": "麦振升-知凡",
+        "nickname": "麦",
         "blog_link": "https://maizsss.github.io"
     },
     {
         "username": "keminu",
-        "nickname": "黄启鹏-诺卡",
+        "nickname": "诺卡",
         "blog_link": "http://keminu.com"
     },
     {
         "username": "mbiao",
-        "nickname": "马彪-文杰",
+        "nickname": "彪哥",
         "blog_link": "https://mabiao8023.github.io"
     },
     {
         "username": "linda",
-        "nickname": "林子盈-灵子",
+        "nickname": "灵子",
         "blog_link": "https://shuangmuyingzi.github.io/"
     },
     {
         "username": "terry",
-        "nickname": "王轶-新义",
+        "nickname": "新义",
         "blog_link": "https://github.com/yzr006/MyMD/"
     },
     {
+        "username": "mbiao",
+        "nickname": "彪哥",
+        "blog_link": "https://mabiao8023.github.io"
+    },
+    {
         "username": "ryansuen",
-        "nickname": "孙毅-子义",
+        "nickname": "子义",
         "blog_link": "https://ryansuen.github.io"
     },
     {
         "username": "4096void",
-        "nickname": "黄特金-元机",
+        "nickname": "大黄",
         "blog_link": "https://4096void.github.io"
     },
     {
         "username": "hupeip",
-        "nickname": "胡佩-佩兰",
+        "nickname": "佩兰",
         "blog_link": "https://hupeip.github.io"
     },
     {
         "username": "guozexuan",
-        "nickname": "郭泽旋-长风",
+        "nickname": "长风",
         "blog_link": "https://guozexuan.github.io"
     },
     {
         "username": "coalya",
-        "nickname": "朱旭-子房",
+        "nickname": "子房",
         "blog_link": "https://coalya.github.io"
     },
     {
         "username": "uking2016",
-        "nickname": "陈宇晴-瑾昕",
+        "nickname": "宇晴",
         "blog_link": "https://uking2016.github.io"
     },
     {
         "username": "uniquestar88",
-        "nickname": "王浩华-逐月",
+        "nickname": "浩华",
         "blog_link": "https://uniquestar88.github.io"
     },
     {
         "username": "heyrumour",
-        "nickname": "何扬-灵风",
+        "nickname": "灵风",
         "blog_link": "https://heyrumour.github.io"
     },
     {
         "username": "xfh0192",
-        "nickname": "谢风华-敬华",
+        "nickname": "敬华",
         "blog_link": "https://xfh0192.github.io"
     },
     {
         "username": "xzhzzz",
-        "nickname": "谢志文-长文",
+        "nickname": "长文",
         "blog_link": "https://xzhzzz.github.io"
     }
 ]

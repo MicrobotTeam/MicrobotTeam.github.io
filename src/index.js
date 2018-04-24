@@ -14,21 +14,23 @@ Vue.component('article-block', {
     userList: Array,
     itemIndex: Number
   },
-  data() {
+  data: function () {
     return {
       showUserModal: false,
       showUserTimer: null
     }
   },
   computed: {
-    authorRef() {
-      let tmpObj = {
+    authorRef: function () {
+      var _this = this;
+      var tmpObj = {
         username: '',
         nickname: '匿名',
         blog_link: ''
       };
-      this.userList.map((item, index) => {
-        if (item.username === this.articleItem.author) {
+      this.userList.map(function (item, index) {
+        var name = typeof _this.articleItem.author === 'object' ? _this.articleItem.author.realname : _this.articleItem.author;
+        if (item.nickname === name) {
           tmpObj = item;
         }
       });
@@ -36,13 +38,14 @@ Vue.component('article-block', {
     }
   },
   methods: {
-    hoverUserInfoHandler(e) {
+    hoverUserInfoHandler: function (e) {
+      var _this = this;
       if (e) {
         clearTimeout(this.showUserTimer);
         this.showUserModal = true;
       } else {
-        this.showUserTimer = setTimeout(() => {
-          this.showUserModal = false;
+        this.showUserTimer = setTimeout(function () {
+          _this.showUserModal = false;
         }, 200)
       }
     }
@@ -61,18 +64,21 @@ new Vue({
   data: {
     loading: false,
     apiPath: {
-      HOST: '/data',
-      GET_ARTICLES: '/article.json',
-      GET_USERS: '/users.json'
+      // HOST: '/data',
+      // GET_ARTICLES: '/article.json',
+      // GET_USERS: '/users.json'
+      HOST: 'https://errfe.linghit.com',
+      GET_ARTICLES: '/api/transfer/blogmanage',
+      GET_USERS: '/data/users.json'
     },
     userList: [],
     chatList: []
   },
   methods: {
-    groupBy( array , f ) {
-      let groups = {};
+    groupBy: function ( array , f ) {
+      var groups = {};
       array.forEach( function( o ) {
-        let group = f(o);
+        var group = f(o);
         groups[group] = groups[group] || [];
         groups[group].push( o );
       });
@@ -83,14 +89,14 @@ new Vue({
         };
       });
     },
-    ajax(path, callback) {
-      let xhr = new XMLHttpRequest();
+    ajax: function (path, callback) {
+      var xhr = new XMLHttpRequest();
       xhr.open('get', path, true);
       xhr.send();
-      xhr.onreadystatechange = () => {
+      xhr.onreadystatechange = function () {
         if (xhr.readyState == 4) {
           if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
-            let resBody = {};
+            var resBody = {};
             try {
               resBody = typeof xhr.responseText === 'string' ? JSON.parse(xhr.responseText) : xhr.responseText;
               callback(resBody);
@@ -102,40 +108,45 @@ new Vue({
         }
       };
     },
-    getArticleData() {
+    getArticleData: function () {
+      var _this = this;
       this.loading = true;
-      this.ajax(`${this.apiPath.HOST}${this.apiPath.GET_ARTICLES}`, (data) => {
-        let tmpArr = data;
-        tmpArr.sort((a, b) => {
-          let aTime = typeof a.time === 'number' ? a.time * 1000 : new Date(a.time.replace('-', '/')).getTime();
-          let bTime = typeof b.time === 'number' ? b.time * 1000 : new Date(b.time.replace('-', '/')).getTime();
+      this.ajax(`${this.apiPath.HOST}${this.apiPath.GET_ARTICLES}?current=1&per_page=1000`, function (d) {
+        if (d.code != 1) {
+          return;
+        }
+        var tmpArr = d.data.list;
+        tmpArr.sort(function (a, b) {
+          var aTime = typeof a.time === 'number' ? a.time * 1000 : new Date(a.time.replace('-', '/')).getTime();
+          var bTime = typeof b.time === 'number' ? b.time * 1000 : new Date(b.time.replace('-', '/')).getTime();
           return -(aTime - bTime);
         });
-        let tmpGroup = this.groupBy(tmpArr, (item) => {
-          let tmpDate = typeof item.time === 'number' ? new Date(item.time * 1000) : new Date(item.time.replace('-', '/'));
-          let formatDate = `${tmpDate.getFullYear()}-${tmpDate.getMonth() + 1}`;
+        var tmpGroup = _this.groupBy(tmpArr, function (item) {
+          var tmpDate = typeof item.time === 'number' ? new Date(item.time * 1000) : new Date(item.time.replace('-', '/'));
+          var formatDate = `${tmpDate.getFullYear()}-${tmpDate.getMonth() + 1}`;
           return formatDate;
         });
-        this.chatList = tmpGroup.map((item) => {
+        _this.chatList = tmpGroup.map(function (item) {
           return {
             date: item.key,
             articleList: item.value
           }
         });
-        this.loading = false;
+        _this.loading = false;
       });
     },
-    getUsersData() {
-      this.ajax(`${this.apiPath.HOST}${this.apiPath.GET_USERS}`, (data) => {
-        this.userList = data;
+    getUsersData: function () {
+      var _this = this;
+      this.ajax(`${this.apiPath.GET_USERS}`, function (data) {
+        _this.userList = data;
       });
     }
   },
-  created() {
+  created: function () {
     this.getUsersData();
     this.getArticleData();
   },
-  mounted() {
+  mounted: function () {
     particlesJS('particles-js', {
       particles: {
         color: '#ddd',
