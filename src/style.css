@@ -33,7 +33,6 @@
   	transform: translateY(30px);
 }
 .fade-enter-active, .fade-leave-active {
-  	// transition: opacity .5s;
   	transition: all .5s;
 }
 .fade-enter, .fade-leave-to {
@@ -49,7 +48,7 @@
 	visibility:hidden;
 }
 body {
-	background-color: #000;
+	background-color: #333;
 }
 * {
 	margin: 0;
@@ -76,10 +75,9 @@ body {
     animation: audioWave 1.5s linear infinite;
 }
 .banner-wrap {
-	// height: 100px;
 	overflow: hidden;
 	border-bottom: solid 1px #ddd;
-	text-align: center;
+	text-align: left;
 	margin-bottom: 20px;
 }
 .banner-wrap .logo-wrap {
@@ -92,12 +90,14 @@ body {
 	display: inline-block;
 	width: 80px;
 }
+.banner-wrap .logo-icon-mt {
+	width: 100%;
+	vertical-align: top;
+}
 .banner-wrap .logo {
 	display: inline-block;
 	padding: 5px;
-	width: 150px;
-	height: 60px;
-	background: rgba(255,255,255,0.7);
+	width: 120px;
 	color: #333;
 	text-align: center;
 	margin: 0px auto;
@@ -107,8 +107,12 @@ body {
 .banner-wrap .intro {
 	color: #ddd;
 	padding: 10px 0 20px;
-	text-align: center;
+	text-align: left;
 	font-size: 12px;
+	position: relative;
+}
+.banner-wrap .intro .from-lh {
+	color: #ddd;
 }
 
 .chat-block {
@@ -228,7 +232,7 @@ body {
   	display: block;
   	width: 22px;
   	height: 14px;
-  	background: url(data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2263%22%20viewBox%3D%220%200%2024%2063%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M2.294%2039.046H24V33.22L12.737%2025.1H24v-9H12.737L24%207.975v-6.04l-21.706-.01v37.12z%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M19.947-.072v6.567L2.365%2020.035H19.97v1.094H2.406L20.04%2034.59l-.047%204.504H-.03V-.072h19.977z%22%20fill%3D%22%230A0A0A%22%2F%3E%3Cpath%20d%3D%22M2.246%2042h21.882v5.74L12.564%2052l11.564%203.986V62H2.246V42z%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M.083%2041H20v4.29L2.483%2052%2020%2058.523V63H.083V41z%22%20fill%3D%22%230A0A0A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E) -2px -4px no-repeat;
+  	background: url(data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2263%22%20viewBox%3D%220%200%2024%2063%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M2.294%2039.046H24V33.22L12.737%2025.1H24v-9H12.737L24%207.975v-6.04l-21.706-.01v37.12z%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M19.947-.072v6.567L2.365%2020.035H19.97v1.094H2.406L20.04%2034.59l-.047%204.504H-.03V-.072h19.977z%22%20fill%3D%22%23333333%22%2F%3E%3Cpath%20d%3D%22M2.246%2042h21.882v5.74L12.564%2052l11.564%203.986V62H2.246V42z%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M.083%2041H20v4.29L2.483%2052%2020%2058.523V63H.083V41z%22%20fill%3D%22%23333333%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E) -2px -4px no-repeat;
   	background-position: -2px -45px;
 }
 .chat-block .link {
@@ -269,11 +273,11 @@ body {
 }
 /* color-4 */
 .chat-block .item-wrap.color-4 .avata {
-	background-color: #000;
+	background-color: #333;
 }
 .chat-block .item-wrap.color-4 .text {
-	background-color: #000;
+	background-color: #333;
 }
 .chat-block .item-wrap.color-4 .arrow{
-	background-color: #000;
+	background-color: #333;
 }

@@ -71,7 +71,22 @@
     },
     {
         "username": "xzhzzz",
-        "nickname": "谢志文-长文",
+        "nickname": "谢志华-长文",
         "blog_link": "https://xzhzzz.github.io"
+    },
+    {
+        "username": "reng99",
+        "nickname": "庞家明-季兴",
+        "blog_link": "http://reng99.cc"
+    },
+    {
+        "username": "xdygogo",
+        "nickname": "谢东寅-东来",
+        "blog_link": "https://xdygogo.github.io"
+    },
+    {
+        "username": "terry-guo",
+        "nickname": "郭文广-梦华",
+        "blog_link": "https://terry-guo.github.io"
     }
 ]

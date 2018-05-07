@@ -9,6 +9,7 @@
     <meta name="Description" content="MicrobotTeam团队博客主页" />
     <title>linghit MicrobotTeam</title>
     <link href="./src/style.css" rel="stylesheet" />
+    <link href="./static/team_logo_favicon.ico" rel="icon" type="image/x-icon" />
     <script type="text/javascript" src="./src/vue.min.js"></script>
   </head>
   <body>
@@ -18,13 +19,14 @@
       <div class="banner-wrap">
         <div class="logo-wrap">
           <h1 class="logo">
-            <img class="logo-icon" src="./static/linghit_logo_mini.png" />
-            <br/>
-            Microbot team
+            <!-- <img class="logo-icon" src="./static/linghit_logo_mini.png" />
+            <br/> -->
+            <img class="logo-icon-mt" src="./static/team_logo2.png" />
           </h1>
         </div>
         <p class="intro">
-          MicrobotTeam是一支努力成长的前端技术团队，同时也将不断向业界输出技术资讯、干货等，期待能和整个前端圈子一起，不断进步，快速发展。
+          <!-- MicrobotTeam是一支努力成长的前端技术团队，同时也将不断向业界输出技术资讯、干货等，期待能和整个前端圈子一起，不断进步，快速发展。 -->
+          From <a class="from-lh" href="http://www.linghit.com/" target="_blank">Linghit</a>
         </p>
       </div>
       <!-- 友链 -->
@@ -35,8 +37,8 @@
           </span>
         </div>
         <div class="content">
-          <a class="friend-link" href="https://androidblog.linghit.com/" target="_blank">Android</a>
-          <a class="friend-link" href="https://microbotteam.github.io/mt.record/" target="_blank">mt.record</a>
+          <a class="friend-link" href="http://linghit.vip/androidblog/index.html?year=2017" target="_blank">灵机Android团队</a>
+          <a class="friend-link" href="http://linghit.vip/" target="_blank">灵机文化社区</a>
         </div>
       </div>
       <div v-if="loading" class="loading"></div>
