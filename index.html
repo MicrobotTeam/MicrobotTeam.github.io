@@ -1,109 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Keywords" content="MicrobotTeam, blog, linghit" />
-    <meta name="Description" content="MicrobotTeam团队博客主页" />
-    <title>linghit MicrobotTeam</title>
-    <link href="./src/style.css" rel="stylesheet" />
-    <link href="./static/team_logo_favicon.ico" rel="icon" type="image/x-icon" />
-    <script type="text/javascript" src="./src/vue.min.js"></script>
-  </head>
-  <body>
-    <div id="particles-js"></div>
-    <div id="app" class="page-content">
-      <!-- banner -->
-      <div class="banner-wrap">
-        <div class="logo-wrap">
-          <h1 class="logo">
-            <!-- <img class="logo-icon" src="./static/linghit_logo_mini.png" />
-            <br/> -->
-            <img class="logo-icon-mt" src="./static/team_logo2.png" />
-          </h1>
-        </div>
-        <p class="intro">
-          <!-- MicrobotTeam是一支努力成长的前端技术团队，同时也将不断向业界输出技术资讯、干货等，期待能和整个前端圈子一起，不断进步，快速发展。 -->
-          灵机文化前端技术团队——From <a class="from-lh" href="http://www.linghit.com/" target="_blank">Linghit</a>
-        </p>
-      </div>
-      <!-- 友链 -->
-      <div class="chat-block">
-        <div class="header">
-          友链
-          <span class="dot">
-          </span>
-        </div>
-        <div class="content">
-          <a class="friend-link" href="http://linghit.vip/androidblog/index.html?year=2017" target="_blank">灵机Android团队</a>
-          <a class="friend-link" href="http://linghit.vip/" target="_blank">灵机文化社区</a>
-        </div>
-      </div>
-      <div v-if="loading" class="loading"></div>
-      <transition-group name="list" tag="div">
-        <chat-block 
-          v-if="chatList.length"
-          v-for="(item, index) in chatList"
-          :key="index"
-          :chat-item="item"
-          :user-list="userList">
-        </chat-block>
-      </transition>
-      
-    </div>
-    <script type="text/x-template" id="chat-block-template">
-      <div class="chat-block">
-        <div class="header">
-          {{ chatItem.date }}
-          <span class="dot">
-          </span>
-        </div>
-        <div class="content">
-          <article-block 
-            v-for="(item, index) in chatItem.articleList"
-            :key="index"
-            :item-index="index"
-            :article-item="item"
-            :user-list="userList">
-          </article-block>
-        </div>
-      </div>
-    </script>
-    <script type="text/x-template" id="article-block-template">
-      <!-- 单条记录 -->
-      <div :class="'item-wrap clear color-' + (itemIndex % 3 + 2)">
-        <!-- 头像 -->
-        <div class="user-info" @mouseenter="hoverUserInfoHandler(true)" @mouseleave="hoverUserInfoHandler(false)">
-          <span class="avata">{{ authorRef.nickname.slice(0,1) }}</span>
-          <p class="nick-name">{{ authorRef.username }}</p>
-          <transition name="fade">
-            <user-modal
-              v-if="showUserModal"
-              :author-ref="authorRef">
-            </user-modal>
-          </transition>
-        </div>
-        <div class="text">
-          <div class="arrow"></div>
-          <a :href="articleItem.link" class="link" target="_blank">
-            {{ articleItem.title }}
-          </a>
-        </div>
-      </div>
-    </script>
-    <script type="text/x-template" id="user-modal-template">
-      <div class="user-modal">
-        <div class="bottom-arrow"></div>
-        <p class="user-content">
-          我是{{ authorRef.nickname }}。<br/>
-          欢迎来访&nbsp;<a class="blog-link" :href="authorRef.blog_link" target="_blank">我的博客</a>
-        </p>
-      </div>
-    </script>
-    
-    <script type="text/javascript" src="./src/particles.min.js"></script>
-    <script type="text/javascript" src="./src/index.min.js"></script>
-  </body>
-</html>
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>microbot</title><link href=./static/favicon.ico rel=icon type=image/x-icon><link rel=stylesheet href=https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css><style>html,body{
+        height: 100%;
+      }
+      #app{
+        height: 100%;
+      }
+    /* banner indicater */
+    .swiper-pagination-bullet{
+        width: 16px !important;
+        border-radius: 4px !important;
+        background:#000 !important;
+    }
+    .swiper-pagination-bullet-active{
+        background: #61DBCC !important;
+    }</style><link href=./static/css/app.a118c7103bd74f8776828d090a521dbf.css rel=stylesheet></head><body><noscript><div style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;">您需要开启 javascript 功能才能更好浏览本站</div></noscript><div id=app></div><script src=https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js></script><script src=https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js></script><script type=text/javascript src=./static/js/manifest.3bb6cd2abacdc78568f1.js></script><script type=text/javascript src=./static/js/vendor.56f9036d3128ec6a768c.js></script><script type=text/javascript src=./static/js/app.a2be71ecf9a83d9367f0.js></script></body></html>
