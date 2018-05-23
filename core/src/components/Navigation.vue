@@ -11,7 +11,7 @@
                         <span class="icon-bar" style="background: #fff;"></span>
                     </button>
                     <a class="navbar-brand" href="/">
-                        <img src="../static/imgs/logo.png" alt="logo" class="logo">
+                        <div class="logo"></div>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -83,6 +83,7 @@
 
 <style lang="less" scoped>
     @import '../styles/public.less';
+    @import '../styles/variable.less';
     #navigation {
         z-index: 999;
         position: fixed;
@@ -92,9 +93,18 @@
         .logo {
             width: 100px;
             height: 26px;
+            background: url('../static/imgs/logo1.png') center center no-repeat;
         }
         .activeLink{
-            color: blue !important;
+            color: @primary-color !important;
+        }
+        .navbar-nav{
+            a{
+                font-weight: bolder;
+            }
+            a:hover{
+                color: @primary-color;
+            }
         }
         &.activeNav{
             background: white; /* 一些不支持背景渐变的浏览器 */  
@@ -107,14 +117,14 @@
                     background: black !important;
                 }
                 .logo{
-                    background: blue;
+                     background: url('../static/imgs/logo2.png') center center no-repeat;
                 }
             }
             .navbar-nav{
                 a{
                     color: black;
                     &:hover{
-                        color: blue;
+                        color: @primary-color;
                     }
                 }
             }

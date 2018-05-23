@@ -7,6 +7,10 @@ import FastClick from 'fastclick'
 import 'swiper/dist/css/swiper.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+// use axios
+import {fetch} from './service/requestApi.js'
+Vue.prototype.$fetch = fetch;
+
 
 if ('addEventListener' in document) {
   document.addEventListener('DOMContentLoaded', function() {
