@@ -9,13 +9,13 @@ d<template>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12 openSourceItem" v-for="(item , index) in openSource">
-                        <a :href="item.path">
-                            <article class="text-center">
-                                <h2>{{item.title}}</h2>
-                                <p>{{item.desc}}</p>
-                            </article>
-                        </a>
+                    <div class="col-md-4 col-sm-6 col-xs-12 openSourceItem" v-for="(item , index) in openSource">
+                        <article class="text-center">
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.desc}}</p>
+                            <button type="button" class="btn btn-default forDetail" disabled v-if="item.noLink">跳转详情页</button>
+                            <a type="button" class="btn btn-default forDetail" :href="item.link" target="_blank" v-else>跳转详情页</a>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -29,9 +29,8 @@ d<template>
         <div id="blogs">
             <div class="container text-center desc">
                 <h3>Blogs/博客</h3>
-                <p>不忘初心，慢慢地成长...</p>
+                <p>不忘初心，我们正在慢慢地成长...</p>
             </div>
-            <div class="container">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-12 blogItem" v-for="(item , index) in sixBlogs">
@@ -43,11 +42,10 @@ d<template>
                     </div>
                 </div>
             </div>
-            </div>
             <div class="container">
                 <div class="row text-center">
-                    <button type="button" class="btn btn-default forMore"> 更多博客
-                    </button>
+                    <a type="button" class="btn btn-default forMore" href="https://microbotteam.github.io/blog/" target="_blank"> 更多博客
+                    </a>
                 </div>
             </div>
         </div>
@@ -68,25 +66,23 @@ d<template>
                 hasBgColor: true,
                 openSource: [
                     {
-                        path: '/',
-                        title: 'TITLE1 HERE',
-                        desc: 'content is here...'
+                        noLink: false,
+                        link: 'https://github.com/MicrobotTeam/MicrobotTeam.github.io',
+                        title: 'MicrobotTeam',
+                        desc: '关于团队的github开源仓库'
                     },
                     {
-                        path: '/',
-                        title: 'TITLE2 HERE',
-                        desc: 'content is here...'
+                        noLink: true,
+                        link: '#',
+                        title: 'Title',
+                        desc: '正在努力中...'
                     },
                     {
-                        path: '/',
-                        title: 'TITLE3 HERE',
-                        desc: 'content is here...'
+                        noLink: true,
+                        link: '#',
+                        title: 'Title',
+                        desc: '正在努力中...'
                     },
-                    {
-                        path: '/',
-                        title: 'TITLE4 HERE',
-                        desc: 'content is here...'
-                    }
                 ],
                 sixBlogs: [
                     // {
@@ -121,9 +117,7 @@ d<template>
                 current: 1,
                 per_page: 6
             }).then(data => {
-                console.log(data.data.list);
                 if(data.code && data.code == 1){
-                    // vm.sixBlogs = data.data.list;
                     let lists = data.data.list;
                     lists.forEach((list,index)=>{
                         if(list.cover && list.cover != ''){
@@ -174,7 +168,13 @@ d<template>
             margin-top: 16px;
             background: #eee;
         }
-        #openSource{
+        .forDetail{
+            width: 94%;
+            background: #eee;
+            margin-top: 10px;
+            // color: @primary-color;
+        }
+        #openSource,#blogs{
             padding-top: 60px;
             .desc{
                 padding-bottom: 16px;
@@ -187,42 +187,27 @@ d<template>
                     margin-left: 3%;
                     padding: 30px 0;
                     border: 1px solid #eee;
-                    border-radius: 6px;
+                    box-shadow: 0 0 4px rgba(0,0,0,.5);
+                    h3{
+                        color: #666;
+                    }
                 }
-            }
-        }
-        #blogs{
-            padding-top: 60px;
-            .desc{
-                padding-bottom: 16px;
             }
             .blogItem{
                 padding: 0;
+                margin-bottom: 36px;
                 article{
-                    // background: red;
-                    width: 96%;
-                    margin-left: 2%;
-                    border: 1px solid #ccc;
-                    margin-bottom: 36px;
-                    padding: 10px 0 22px 0;
+                    width: 94%;
+                    margin-left: 3%;
+                    border: 1px solid #eee;
+                    padding: 10px 0 20px 0;
                     box-shadow: 0 0 4px rgba(0,0,0,.5);
                     h3{
                         overflow: hidden;
                         white-space: nowrap; 
                         text-overflow:ellipsis;
-                        padding-bottom: 10px;
                         color: #666;
                     }
-                    .forDetail{
-                        width: 90%;
-                        background: #eee;
-                        // color: @primary-color;
-                    }
-                    // .cover_img{
-                    //     width: 100%;
-                    //     display: block;
-                    //     height: auto;
-                    // }
                 }
             }
         }

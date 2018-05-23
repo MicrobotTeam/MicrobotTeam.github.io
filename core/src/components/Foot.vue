@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 text-center">
                     <router-link to="/" class="copyright">
-                        <img src="../static/imgs/logo.png" alt="logo" class="logo">
+                        <img src="../static/imgs/logo2.png" alt="logo" class="logo">
                         <p>Copyright&nbsp;&copy;&nbsp;2018 Microbot Team 版权所有</p>
                     </router-link>
                 </div>
@@ -43,8 +43,8 @@ export default {
         width: 100%;
         padding:38px 0 30px 0;
         font-weight: bolder;
-        background: #666;
-        color: #333;
+        background: #eee;
+        color: #666;
         &.hasBgColor{
             // background: none;
             opacity: .4;
@@ -53,13 +53,13 @@ export default {
             }
         }
         .link{
-            color: #333;
+            color: #666;
             display: block;
             margin-bottom: 8px;
             font-weight: normal;
         }
         .copyright{
-            color: #333;
+            color: #666;
             font-weight: normal;
         }
         .logo{

@@ -23,7 +23,8 @@
                         </li>
                         <li>
                             <a href="javascript:;" @click="toAnchor('#blogs')" v-if="toSingle">博客</a>
-                            <router-link :to="{path:'/blogs'}" v-else :class="{'activeLink': navIndex==2}">博客</router-link>
+                            <!--<router-link :to="{path:'/blogs'}" v-else :class="{'activeLink': navIndex==2}">博客</router-link>-->
+                            <a href="https://microbotteam.github.io/blog/" target="_blank" v-else>博客</a>
                         </li>
                         <li><router-link :to="{path:'/about'}" :class="{'activeLink': navIndex==3}">关于</router-link></li>
                     </ul>
@@ -61,7 +62,6 @@
             var vm = this;
             var path = vm.$route.path;
             path == '/' ? vm.toSingle = true : vm.toSingle = false;
-            console.log(path);
             switch(path){
                 case '/':
                     vm.navIndex = 1;

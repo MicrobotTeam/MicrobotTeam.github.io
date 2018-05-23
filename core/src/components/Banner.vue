@@ -3,7 +3,8 @@
   <div class="banner" style="width: 100%;">
     <swiper :options="swiperOption">
       <swiper-slide v-for="(banner,index) in banners" :key="index">
-        <router-link :to="{path:banner.path}" class="bannerBg" :class="banner.class"></router-link>
+        <!--<router-link :to="{path:banner.path}" class="bannerBg" :class="banner.class"></router-link>-->
+        <div  class="bannerBg" :class="banner.class"></div>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
