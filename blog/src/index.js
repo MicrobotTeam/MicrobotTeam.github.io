@@ -69,7 +69,7 @@ new Vue({
       // GET_USERS: '/users.json'
       HOST: 'https://errfe.linghit.com',
       GET_ARTICLES: '/api/transfer/blogmanage',
-      GET_USERS: '/data/users.json'
+      GET_USERS: '/blog/data/users.json'
     },
     userList: [],
     chatList: []
