@@ -93,7 +93,7 @@
         .logo {
             width: 100px;
             height: 26px;
-            background: url('../static/imgs/logo1.png') center center no-repeat;
+            background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/f02b14bfebb4f4-100x26.png') center center no-repeat;
         }
         .activeLink{
             color: @primary-color !important;
@@ -117,7 +117,7 @@
                     background: black !important;
                 }
                 .logo{
-                     background: url('../static/imgs/logo2.png') center center no-repeat;
+                     background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/589a83a963b93d-100x26.png') center center no-repeat;
                 }
             }
             .navbar-nav{
