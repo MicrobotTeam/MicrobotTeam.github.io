@@ -104,7 +104,7 @@ d<template>
             vm.$nextTick(function(){
                 $(window.document).scroll(function(){
                     let top = $(document).scrollTop();
-                    if(top >=148){
+                    if(top >=50){
                         vm.changeNavBg = true;
                     }else{
                         vm.changeNavBg = false;
