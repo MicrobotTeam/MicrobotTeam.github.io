@@ -46,8 +46,8 @@ export default {
         background: #eee;
         color: #666;
         &.hasBgColor{
-            // background: none;
-            opacity: .4;
+            background: #000;
+            opacity: .5;
             .link,.linkTitle,.copyright{
                 color: #fff;
             }
