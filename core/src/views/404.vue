@@ -38,7 +38,7 @@ export default {
 
 <style lang="less" scoped>
 #NotFound{
-    background: url('../static/imgs/notFoundBg.jpg') center center no-repeat;
+    background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/b9d9ba411f16f5-2606x1080.jpg') center center no-repeat;
     width: 100%;
     height: 100%;
     overflow: hidden;
