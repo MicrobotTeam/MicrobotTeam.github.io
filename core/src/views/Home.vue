@@ -72,10 +72,10 @@ d<template>
                         desc: '关于团队的github开源仓库'
                     },
                     {
-                        noLink: true,
-                        link: '#',
-                        title: 'Title',
-                        desc: '正在努力中...'
+                        noLink: false,
+                        link: 'https://github.com/MicrobotTeam/frontend-attention',
+                        title: 'Frontend Attention',
+                        desc: '团队MicrobotTeam的前端注意事项'
                     },
                     {
                         noLink: true,
