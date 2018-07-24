@@ -1,4 +1,4 @@
-d<template>
+<template>
     <div id="home">
         <navigation :changeNavBg='changeNavBg'></navigation>
         <banner></banner>

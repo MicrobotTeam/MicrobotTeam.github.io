@@ -4,7 +4,7 @@
     <swiper :options="swiperOption">
       <swiper-slide v-for="(banner,index) in banners" :key="index">
         <!--<router-link :to="{path:banner.path}" class="bannerBg" :class="banner.class"></router-link>-->
-        <div  class="bannerBg" :class="banner.class"></div>
+        <div  class="bannerBg" :class="banner.class" @click="navigateTo(banner.url,banner.class)"></div>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
@@ -30,15 +30,15 @@ export default {
       banners: [
         {
           class: 'item0',
-          path: '/first'
+          url: 'https://microbotteam.github.io/#/about'
         },
         {
           class: 'item1',
-          path: '/second'
+          url: ''
         },
         {
           class: 'item2',
-          path: '/third'
+          url: ''
         }
       ]
     }
@@ -54,6 +54,13 @@ export default {
     //     }
     //   },'get');
     // }
+    navigateTo: function(url,className){
+      if(url!=''){
+        window.location.href = url;
+      }else{
+        alert('暂时没有链接');
+      }
+    }
   },
   created: function() {
     // this.show_banner();
@@ -87,15 +94,19 @@ export default {
     .bannerBg{
       display: block;
       width: 100%;
+      cursor:pointer;
     }
     .item0{
-      background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/967c038faaf84b-1920x500.jpg') center center no-repeat;
+      // background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/967c038faaf84b-1920x500.jpg') center center no-repeat;
+      background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/5303973ec1ed02-1920x500.jpg') center center no-repeat;
     }
     .item1{
-      background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/fc279cb13cb149-1920x500.jpg') center center no-repeat;
+      // background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/fc279cb13cb149-1920x500.jpg') center center no-repeat;
+      background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/967c038faaf84b-1920x500.jpg') center center no-repeat;
     }
     .item2{
-      background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/cdb12c43737bd6-1920x500.jpg') center center no-repeat;
+      // background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/cdb12c43737bd6-1920x500.jpg') center center no-repeat;
+      background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/fc279cb13cb149-1920x500.jpg') center center no-repeat;
     }
   }
 </style>
