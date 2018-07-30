@@ -98,7 +98,8 @@ export default {
     }
     .item0{
       // background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/967c038faaf84b-1920x500.jpg') center center no-repeat;
-      background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/5303973ec1ed02-1920x500.jpg') center center no-repeat;
+      // background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/5303973ec1ed02-1920x500.jpg') center center no-repeat;
+      background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/3f40f3bf3cfae6-1920x500.jpg') center center no-repeat;
     }
     .item1{
       // background: url('https://mmc-forecast.oss-cn-shanghai.aliyuncs.com/images/fc279cb13cb149-1920x500.jpg') center center no-repeat;
